@@ -1,0 +1,8 @@
+FROM semitechnologies/weaviate:1.23.7
+EXPOSE 8080
+EXPOSE 50051
+CMD ["/bin/bash"]
+ENTRYPOINT ["/bin/weaviate"]
+CMD [
+    "--host" "0.0.0.0" "--port" "8080" "--scheme" "http"
+]
